@@ -232,7 +232,7 @@ if [ -n "$HOMEBREW_EXISTING" ]
 then
   git fetch $Q
 else
-  git fetch $Q origin master:refs/remotes/origin/master --no-tags --depth=1 --force --update-shallow
+  git fetch $Q origin master:refs/remotes/origin/master --tags --force
 fi
 git reset $Q --hard origin/master
 unset GIT_DIR GIT_WORK_TREE HOMEBREW_EXISTING
